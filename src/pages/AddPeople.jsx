@@ -11,7 +11,6 @@ const AddPeople = () => {
     console.log("Celebrity Name:", name);
     console.log("Celebrity URL:", url);
     firebase.newPeople(name, url).then(alert(name," added"));
-    // const imagelink = await cloudinary.uploader.upload(url);
   };
 
   return (
