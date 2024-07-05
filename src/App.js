@@ -1,32 +1,19 @@
 import { Routes, Route } from "react-router-dom";
-
-// Components
-import MyNavbar from "./components/Navbar";
-
-// Pages
-import RegisterPage from "./pages/Register";
-import LoginPage from "./pages/Login";
-import ListingPage from "./pages/List";
-import HomePage from "./pages/Home";
-import BookDetailPage from "./pages/Detail";
-import OrdersPage from "./pages/ViewOrder";
-import ViewOrderDetails from "./pages/ViewOrderDetail";
-// CSS
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
+import MyNavbar from "./components/Navbar";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import AddPeople from "./pages/AddPeople";
+import SinglePerson from "./pages/SinglePerson";
 function App() {
   return (
-    <div>
+    <div className="h-full w-full">
       <MyNavbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/book/list" element={<ListingPage />} />
-        <Route path="/book/view/:bookId" element={<BookDetailPage />} />
-        <Route path="/book/orders" element={<OrdersPage />} />
-        <Route path="/books/orders/:bookId" element={<ViewOrderDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/addpeople" element={<AddPeople />} />
+        <Route path="/single/:id" element={<SinglePerson />} />
       </Routes>
     </div>
   );
