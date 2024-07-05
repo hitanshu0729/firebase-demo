@@ -5,8 +5,9 @@ import { useNavigate } from "react-router-dom";
 const AddPeople = () => {
   const firebase = useFirebase();
   const loginGoogle = function () {
-    firebase.signinWithGoogle();
-    console.log(firebase.user);
+    firebase.signinWithGoogle().then((res) => {
+      console.log(firebase.user);
+    });
   };
   const navigate = useNavigate();
   useEffect(() => {

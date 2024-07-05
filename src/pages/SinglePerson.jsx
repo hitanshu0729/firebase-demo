@@ -85,7 +85,7 @@ const SinglePerson = () => {
         </form>
       </div>
       {images && images.length > 0 && (
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full bg-gray-500 items-center">
           <h1 className="text-center text-white text-4xl">
             {person.name}'s Images
           </h1>
